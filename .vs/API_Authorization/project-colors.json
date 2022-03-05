@@ -5,7 +5,22 @@
       "ProjectGuid": "fc297fbb-e760-410f-b581-40ee591899d5",
       "DisplayName": "API_Authorization",
       "ColorIndex": 0
+    },
+    "f33fb9e1-67e0-4f92-8d65-d497c04d7d12": {
+      "ProjectGuid": "f33fb9e1-67e0-4f92-8d65-d497c04d7d12",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 1
+    },
+    "1401c359-ac4f-4da5-a636-f49457a9762b": {
+      "ProjectGuid": "1401c359-ac4f-4da5-a636-f49457a9762b",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }
