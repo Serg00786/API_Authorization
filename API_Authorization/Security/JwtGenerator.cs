@@ -15,7 +15,7 @@ namespace API_Authorization.Security
 
 		public JwtGenerator(IConfiguration config)
 		{
-			_key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
+			_key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetSection("AppSettings:TokenKey").Value));
 		}
 
 		public string CreateToken(AppUser user)

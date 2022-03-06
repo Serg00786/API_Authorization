@@ -1,5 +1,6 @@
 ﻿using API_Authorization.Exceptions;
 using API_Authorization.Identity;
+using API_Authorization.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using System.Net;
@@ -13,12 +14,15 @@ namespace API_Authorization.Application
 		private readonly UserManager<AppUser> _userManager;
 
 		private readonly SignInManager<AppUser> _signInManager;
+		private readonly IJwtGenerator _jwtGenerator;
 
 		public LoginHandler(UserManager <AppUser> userManager,
-									   SignInManager<AppUser> signInManager)
+									   SignInManager<AppUser> signInManager, IJwtGenerator jwtGenerator)
 		{
 			_userManager = userManager;
 			_signInManager = signInManager;
+			_jwtGenerator = jwtGenerator;
+			
 		}
 
 		public async Task<UserModel> Handle(LoginQuery request, CancellationToken cancellationToken)
@@ -36,7 +40,7 @@ namespace API_Authorization.Application
 				return new UserModel
 				{
 					DisplayName = user.Displayname,
-					Token = "test",
+					Token = _jwtGenerator.CreateToken(user),
                     UserName = user.UserName,
 					Image = null
 				};
