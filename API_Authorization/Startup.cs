@@ -19,6 +19,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using API_Authorization.Interfaces;
 using API_Authorization.Security;
+using API_Authorization.Middleware;
 
 namespace API_Authorization
 {
@@ -80,7 +81,7 @@ namespace API_Authorization
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseRouting();
             app.UseAuthentication();
 
