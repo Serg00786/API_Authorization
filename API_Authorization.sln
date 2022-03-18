@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Authorization", "API_Authorization\API_Authorization.csproj", "{FC297FBB-E760-410F-B581-40EE591899D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Authorization", "API_Authorization\API_Authorization.csproj", "{FC297FBB-E760-410F-B581-40EE591899D5}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{27924422-6612-49BF-B45B-B961AE1BD5CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FC297FBB-E760-410F-B581-40EE591899D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC297FBB-E760-410F-B581-40EE591899D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC297FBB-E760-410F-B581-40EE591899D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27924422-6612-49BF-B45B-B961AE1BD5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27924422-6612-49BF-B45B-B961AE1BD5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27924422-6612-49BF-B45B-B961AE1BD5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27924422-6612-49BF-B45B-B961AE1BD5CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
