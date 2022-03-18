@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using API_Authorization.Interfaces;
 using API_Authorization.Security;
 using API_Authorization.Middleware;
+using API_Authorization.Model;
 
 namespace API_Authorization
 {
@@ -50,6 +51,7 @@ namespace API_Authorization
             }).SetCompatibilityVersion(CompatibilityVersion.Latest);
 
             services.TryAddSingleton<ISystemClock, SystemClock>();
+            services.Configure<Parameters>(Configuration.GetSection(Parameters.Developments));
 
             var builder = services.AddIdentityCore<AppUser>();
             var identityBuilder = new IdentityBuilder(builder.UserType, builder.Services);
